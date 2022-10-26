@@ -17,15 +17,19 @@ pipeline {
         ARTVERSION = "${env.BUILD_ID}"
     }
 	
-    stages{
+     stages{
         
         stage('BUILD'){
             steps {
-                sh 'mvn -s settings.xml -DskipTests install'
+                sh 'mvn clean install -DskipTests'
             }
-      
-
-}
+            post {
+                success {
+                    echo 'Now Archiving...'
+                    archiveArtifacts artifacts: '**/target/*.war'
+                }
+            }
+        }
     }
 }
     
