@@ -15,7 +15,8 @@ pipeline {
         NEXUS_USER = "admin"
 	NEXUS_PASS = "199310"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "34.224.168.231:8081"
+        NEXUS_IP = "34.224.168.231"
+	NEXUS_PORT = "8081"
         NEXUS_REPOSITORY = "vprofile-release"
 	NEXUS_REPOGRP_ID    = "vpro-maven-group"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
@@ -26,7 +27,7 @@ pipeline {
         
         stage('BUILD'){
             steps {
-                sh 'mvn clean install -DskipTests'
+                sh 'mvn -s settings.xml install -DskipTests'
             }
             post {
                 success {
