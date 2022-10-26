@@ -9,11 +9,11 @@ pipeline {
 	
     environment {
         NEXUS_VERSION = "nexus3"
-	SNAP_REPO = "vprofile-snapshot
+	SNAP_REPO = "vprofile-snapshot"
 	CENTRAL_REPO = "vpro-maven-central"
 	RELEASE_REPO = "vprofile-release"
         NEXUS_USER = "admin"
-	NEXUS_Password = "199310"
+	NEXUS_PASS = "199310"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "34.224.168.231:8081"
         NEXUS_REPOSITORY = "vprofile-release"
