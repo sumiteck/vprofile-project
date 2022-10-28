@@ -15,7 +15,7 @@ pipeline {
         NEXUS_USER = "admin"
 	NEXUS_PASS = "199310"
         NEXUS_PROTOCOL = "http"
-        NEXUSIP = "23.20.77.244"
+        NEXUSIP = "18.234.113.107"
 	NEXUSPORT = "8081"
 	NEXUS_GRP_REPO = "vpro-maven-group"
         NEXUS_REPOSITORY = "vprofile-release"
